@@ -1,0 +1,81 @@
+name: Feature request
+description: Suggest an idea for this project
+title: "[Feature]: "
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Add a title
+
+  - type: markdown
+    attributes:
+      value: |
+        **Feature:**
+
+  - type: input
+    id: contact_details
+    attributes:
+      label: "Contact Details"
+      description: "What is your name?"
+      placeholder: "ex. Sertha Taweewattana"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: "Type of request?"
+      description: "Select the type of your request"
+      multiple: false
+      options:
+        - "New Feature"
+        - "Bug Fix"
+        - "Documentation"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        **New Feature**
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: "What is the OS which you want to suggest?"
+      description: "Select the operating system"
+      multiple: false
+      options:
+        - "Windows"
+        - "macOS"
+        - "Linux"
+        - "iOS"
+        - "Android"
+        - "Other"
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestion_details
+    attributes:
+      label: "What are the details of your suggestion?"
+      description: "Explain what do you want"
+      placeholder: "Describe your suggestion in detail..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature_details
+    attributes:
+      label: "Feature details!"
+      description: "Any additional technical information or mockups"
+      placeholder: "Provide any extra details here..."
+    validations:
+      required: false
